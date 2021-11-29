@@ -2,7 +2,7 @@ describe("Basic user flow for Website", () => {
   // First, visit the website
   beforeAll(async () => {
     await page.goto(
-      "https://testing.tianyuezhang1997.site/cse110-fa21-group8/create-skeletons-staging/source/"
+      "https://testing.tianyuezhang1997.site/cse110-fa21-group8/create-skeletons-staging/source/viewRecipe.html"
     );
   });
 
@@ -18,7 +18,7 @@ describe("Basic user flow for Website", () => {
   });
 
   it("Check ingredients checkbox can be clicked", async () => {
-    //click ingredient 1
+   /* //click ingredient 1
     let button1 = await page.$("#ingredient1");
     await button1.click();
     //click ingredient 2
@@ -28,10 +28,13 @@ describe("Basic user flow for Website", () => {
     let button3 = await page.$("#ingredient3");
     await button3.click();
 
-    expect(button1.checked).toBe(true);
-    expect(button1.checked).toBe(true);
-    expect(button1.checked).toBe(true);
+    expect(button1).toBeChecked();
+    expect(button1.getProperty(checked)).toBe(true);
+    expect(button2.getProperty(checked)).toEqual(true);
+    expect(button3.getProperty(checked)).toEqual(true); */
+
+    const checkbox = await page.$("ingredientsList");
+    await checkbox.click();
+    console.log(await (await checkbox.getProperty('checked')).jsonValue());
   });
-
-
 });
