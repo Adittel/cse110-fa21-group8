@@ -18,10 +18,10 @@ describe("Basic user flow for Website", () => {
   });
 
   it("Check ingredients checkbox can be clicked", async () => {
-   /* //click ingredient 1
+    //click ingredient 1
     let button1 = await page.$("#ingredient1");
     await button1.click();
-    //click ingredient 2
+  /*  //click ingredient 2
     let button2 = await page.$("#ingredient2");
     await button2.click();
     //click ingredient 3
@@ -33,8 +33,8 @@ describe("Basic user flow for Website", () => {
     expect(button2.getProperty(checked)).toEqual(true);
     expect(button3.getProperty(checked)).toEqual(true); */
 
-    const checkbox = await page.$("ingredientsList");
-    await checkbox.click();
-    console.log(await (await checkbox.getProperty('checked')).jsonValue());
+    const isCheckBoxChecked = await (await button1.getProperty("checked")).jsonValue();
+
+    expect(isCheckBoxChecked).toBe(true);
   });
 });

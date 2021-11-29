@@ -7,7 +7,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.3.1",
-    "jest-puppeteer": "^6.0.0",
+    "jest-puppeteer": "^6.0.2",
     "jsdoc": "^3.6.7",
     "prettier": "2.4.1",
     "puppeteer": "^11.0.0"
@@ -24,7 +24,8 @@
     "create-skeletons-staging-test": "jest create-skeletons-staging.test.js",
     "create-skeletons-test": "jest create-skeletons.test.js",
     "main-staging-test": "jest main-staging.test.js",
-    "main-test": "jest main.test.js"
+    "main-test": "jest main.test.js",
+    "unit-test": "jest unit.test.js"
   },
   "jest": {
     "preset": "jest-puppeteer",
